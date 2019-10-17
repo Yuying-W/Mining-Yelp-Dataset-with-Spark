@@ -1,0 +1,6 @@
+.DS_Store
+.ipynb_checkpoints/
+.vscode/
+
+# data
+usr_biz.csv
