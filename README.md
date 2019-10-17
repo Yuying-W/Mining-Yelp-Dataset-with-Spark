@@ -30,6 +30,6 @@ Full Description: https://www.yelp.com/dataset/documentation/main
    
 
 ## Dependencies <a name="dependencies"/>
-* spark 2.4
-* python 3.6
+* Spark 2.4
+* Python 3.6
 * JDK 1.8
