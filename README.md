@@ -1,14 +1,13 @@
-Note: This is a private repository, so `View on GitHub` will give a 404 error.
+** 💡Note: This is a private repository, so `View on GitHub` will give a 404 error.**
 
 # Mining-Yelp-Dataset-with-Spark
 Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 
 ## Contributors
-| <img alt="yuying_avatar" src="imgs/yuying_avatar.jpg" width="100"/> | <img alt="yang_avatar" src="imgs/yang_avatar.png" width="100"/>|  
-|---------------------------------|:---------------------------:|    
-| Yuying Wang        |    Yang Zheng|   
 
-
+| <img alt="yuying_avatar" src="imgs/yuying_avatar.jpg" width="100"/>                          |  <img alt="yang_avatar" src="imgs/yang_avatar.png" width="100"/> 
+|---------------------------------|:---------------------------:|   
+| Yuying Wang          |    Yang Zheng    | 
 
 ## Table of Contents
 * [This Repository](#description-of-file)
@@ -25,7 +24,7 @@ Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 |---------------------------------|:---------------------------:|   
 | `data_exploration.ipynb`          |     exploratory data analysis on the yelp dataset                      |   
 | `frequent_itemset_mining.ipynb`   |   mining frequent itemsets using SON, A-Priori algorithm |      
-| `similar_businesses.py`   |  detecting similar business pairs using MinHash and LSH algorithm  |    
+| `similar_businesses.py`   |  detecting similar businesses using MinHash and LSH algorithm  |    
 | `hybrid_recommender_system.py`   | combines different types of recommendation techniques  |      
  
 ---
@@ -41,7 +40,7 @@ We performed an Exploratory Data Analysis on the dataset, and here are some Inte
 ## Frequent Itemset Mining <a name="frequent-itemset-mining"/>
 **The high level design:**
 
-<img alt="son-algorithm" src="imgs/SON.png" width="500"/>
+<img alt="son-algorithm" src="imgs/SON.png" width="550"/>
 
  **Conclusion:**  
  Not surprisingly, we found that the restaurants are **geographically close** to each other or they **serve similar food** (maybe have similar business names) in almost all frequent sets. (*e.g. Ramen Sora, Sushi House Goyemon, Monta Ramen*)
@@ -59,7 +58,7 @@ We combine different types of recommendation techniques including **content-base
 
 The ratings range from 1 to 5, and the error distribution on testing data looks like: 
 
-<img alt="Error distribution on testing data" src="imgs/rec-error-dist.png" width="420"/>
+<img alt="Error distribution on testing data" src="imgs/rec-error-dist.png" width="480"/>
 
 About **98%** prediction error are less than 1.0, and the overall **RMSE** is 0.9782, which is much better than any individual recommender system.
  
