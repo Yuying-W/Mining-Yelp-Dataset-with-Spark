@@ -1,4 +1,4 @@
-** 💡Note: This is a private repository, so `View on GitHub` will give a 404 error.**
+**💡Note: This is a private repository, so `View on GitHub` will give a 404 error.**
 
 # Mining-Yelp-Dataset-with-Spark
 Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
@@ -9,15 +9,6 @@ Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 |---------------------------------|:---------------------------:|   
 | Yuying Wang          |    Yang Zheng    | 
 
-## Table of Contents
-* [This Repository](#description-of-file)
-* [Data Exploration](#data-exploration)
-* [Frequent Itemset Mining](#frequent-itemset-mining)
-* [Similar Businesses](#similar-businesses)
-* [Hybrid Recommender System](#hybrid-recommender-system)
-
-
-
 ## This Repository <a name="description-of-files"><a/> 
 
 | File                            |      Description            |   
@@ -26,16 +17,21 @@ Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 | `frequent_itemset_mining.ipynb`   |   mining frequent itemsets using SON, A-Priori algorithm |      
 | `similar_businesses.py`   |  detecting similar businesses using MinHash and LSH algorithm  |    
 | `hybrid_recommender_system.py`   | combines different types of recommendation techniques  |      
+## Table of Contents
+* [Data Exploration](#data-exploration)
+* [Frequent Itemset Mining](#frequent-itemset-mining)
+* [Similar Businesses](#similar-businesses)
+* [Hybrid Recommender System](#hybrid-recommender-system)
+
  
----
+
 ## Data Exploration <a name="data-exploration"/>
 
-### Data Description
 We performed an Exploratory Data Analysis on the dataset, and here are some Interesting Findings:
 - TBA
 - TBA
 
----
+
 
 ## Frequent Itemset Mining <a name="frequent-itemset-mining"/>
 **The high level design:**
@@ -45,12 +41,12 @@ We performed an Exploratory Data Analysis on the dataset, and here are some Inte
  **Conclusion:**  
  Not surprisingly, we found that the restaurants are **geographically close** to each other or they **serve similar food** (maybe have similar business names) in almost all frequent sets. (*e.g. Ramen Sora, Sushi House Goyemon, Monta Ramen*)
 
----
+
 
 ## Similar Businesses <a name="similar-businesses"/>
 First we use **MinHash** to generate signature of each business, then apply **LSH** to find all candidate pairs, and finally do a full pass to eliminate all false positives. We spent quite some time on designing **hash functions**, and suprisingly, we achieve **precision=1.0** and **recall=1.0** .
 
----
+
 
 ## Hybrid Recommender System <a name="hybrid-recommender-system"/>
 
@@ -58,7 +54,7 @@ We combine different types of recommendation techniques including **content-base
 
 The ratings range from 1 to 5, and the error distribution on testing data looks like: 
 
-<img alt="Error distribution on testing data" src="imgs/rec-error-dist.png" width="480"/>
+<img alt="Error distribution on testing data" src="imgs/rec-error-dist.png" width="500"/>
 
 About **98%** prediction error are less than 1.0, and the overall **RMSE** is 0.9782, which is much better than any individual recommender system.
  
