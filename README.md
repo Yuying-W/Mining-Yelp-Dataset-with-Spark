@@ -9,7 +9,17 @@ Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 | Yuying Wang        |    Yang Zheng|   
 
 
-## Repository <a name="description-of-files"><a/> 
+
+## Table of Contents
+* [This Repository](#description-of-file)
+* [Data Exploration](#data-exploration)
+* [Frequent Itemset Mining](#frequent-itemset-mining)
+* [Similar Businesses](#similar-businesses)
+* [Hybrid Recommender System](#hybrid-recommender-system)
+
+
+
+## This Repository <a name="description-of-files"><a/> 
 
 | File                            |      Description            |   
 |---------------------------------|:---------------------------:|   
@@ -19,29 +29,26 @@ Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 | `hybrid_recommender_system.py`   | combines different types of recommendation techniques  |      
  
 
-## Table of Contents
-* [Data Exploration](#data-exploration)
-* [Frequent Itemset Mining](#frequent-itemset-mining)
-* [Similar Businesses](#similar-businesses)
-* [Hybrid Recommender System](#hybrid-recommender-system)
-
-
 ## Data Exploration <a name="data-exploration"/>
 
 ### Data Description
-Full Description: https://www.yelp.com/dataset/documentation/main 
-
-Some Interesting Findings:
+We performed an Exploratory Data Analysis on the dataset, and here are some Interesting Findings:
 - TBA
 - 
 
 
 ## Frequent Itemset Mining <a name="frequent-itemset-mining"/>
- Not surprisingly, we found that the resturants are **geographically close** to each other or they **serve similar food** (maybe have similar business names) in almost all frequent sets. (e.g. Ramen Sora, Sushi House Goyemon, Monta Ramen)
+**The high level design:**
+
+<img alt="son-algorithm" src="imgs/SON.png" width="500"/>
+
+ **Conclusion:**  
+ Not surprisingly, we found that the restaurants are **geographically close** to each other or they **serve similar food** (maybe have similar business names) in almost all frequent sets. (*e.g. Ramen Sora, Sushi House Goyemon, Monta Ramen*)
+
 
 
 ## Similar Businesses <a name="similar-businesses"/>
-First we use MinHash to generate signature of each business, then apply LSH to find all candidate pairs, and finally do a full pass to eliminate all false positives. We spent quite some time on designing hash functions, and suprisingly, we achieve **precision=1.0 and recall=1.0** .
+First we use **MinHash** to generate signature of each business, then apply **LSH** to find all candidate pairs, and finally do a full pass to eliminate all false positives. We spent quite some time on designing **hash functions**, and suprisingly, we achieve **precision=1.0** and **recall=1.0** .
 
 
 ## Hybrid Recommender System <a name="hybrid-recommender-system"/>
@@ -49,7 +56,9 @@ First we use MinHash to generate signature of each business, then apply LSH to f
 We combine different types of recommendation techniques including content-based filtering, model-based collaborative filtering, user-based CF, and item-based CF.
 
 The ratings range from 1 to 5, the error distribution on testing data: 
-<img alt="Error distribution on testing data" src="imgs/rec-error-dist.png" width="420"/>  
+
+<img alt="Error distribution on testing data" src="imgs/rec-error-dist.png" width="420"/>
+
 about 98% prediction error are less than 1.0, and the overall RMSE is 0.9782, which is much better than any individual recommender system.
  
 
