@@ -16,7 +16,7 @@ Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 | `data_exploration.ipynb`          |     exploratory data analysis on the yelp dataset                      |   
 | `frequent_itemset_mining.ipynb`   |   mining frequent itemsets using SON, A-Priori algorithm |      
 | `similar_businesses.py`   |  detecting similar business pairs using MinHash and LSH algorithm  |    
-| `hybrid_recommender_system.py`   | combines different types of recommendation techniques including content-based filtering, model-based collaborative filtering, user-based CF, and item-based CF   |      
+| `hybrid_recommender_system.py`   | combines different types of recommendation techniques  |      
  
 
 ## Table of Contents
@@ -45,6 +45,9 @@ First we use MinHash to generate signature of each business, then apply LSH to f
 
 
 ## Hybrid Recommender System <a name="hybrid-recommender-system"/>
+
+We combine different types of recommendation techniques including content-based filtering, model-based collaborative filtering, user-based CF, and item-based CF.
+
 The ratings range from 1 to 5, the error distribution on testing data: 
 <img alt="Error distribution on testing data" src="imgs/rec-error-dist.png" width="420"/>  
 about 98% prediction error are less than 1.0, and the overall RMSE is 0.9782, which is much better than any individual recommender system.
