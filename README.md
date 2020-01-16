@@ -1,11 +1,11 @@
-Note: This is a private repository, so `View on GitHub` gives a 404 error.
+Note: This is a private repository, so `View on GitHub` will give a 404 error.
 
 # Mining-Yelp-Dataset-with-Spark
 Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 
 ## Contributors
-|  <img alt="yuying_avatar" src="imgs/yuying_avatar.jpg" width="100"/> | <img alt="yang_avatar" src="imgs/yang_avatar.png" width="100"/> |    
-|---------------------------------|---------------------------|  
+| <img alt="yuying_avatar" src="imgs/yuying_avatar.jpg" width="100"/> | <img alt="yang_avatar" src="imgs/yang_avatar.png" width="100"/>|  
+|---------------------------------|:---------------------------:|    
 | Yuying Wang        |    Yang Zheng|   
 
 
@@ -55,7 +55,7 @@ First we use **MinHash** to generate signature of each business, then apply **LS
 
 ## Hybrid Recommender System <a name="hybrid-recommender-system"/>
 
-We combine different types of recommendation techniques including content-based filtering, model-based collaborative filtering, user-based CF, and item-based CF.
+We combine different types of recommendation techniques including **content-based filtering, model-based collaborative filtering, user-based CF, and item-based CF**.
 
 The ratings range from 1 to 5, and the error distribution on testing data looks like: 
 
