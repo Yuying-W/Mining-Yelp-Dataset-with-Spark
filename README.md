@@ -47,6 +47,10 @@ We performed an Exploratory Data Analysis on the dataset, and here are some Inte
 
 
 ## Similar Businesses <a name="similar-businesses"/>
+**The high level design:**
+
+<img alt="similar-items" src="imgs/similar-items.png" width="550"/>
+
 First we use **MinHash** to generate signature of each business, then apply **LSH** to find all candidate pairs, and finally do a full pass to eliminate all false positives. We spent quite some time on designing **hash functions**, and suprisingly, we achieve **precision=1.0** and **recall=1.0** .
 
 
