@@ -9,6 +9,7 @@ Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 |---------------------------------|:---------------------------:|   
 | Yuying Wang          |    Yang Zheng    | 
 
+
 ## This Repository <a name="description-of-files"><a/> 
 
 | File                            |      Description            |   
@@ -17,6 +18,8 @@ Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 | `frequent_itemset_mining.ipynb`   |   mining frequent itemsets using SON, A-Priori algorithm |      
 | `similar_businesses.py`   |  detecting similar businesses using MinHash and LSH algorithm  |    
 | `hybrid_recommender_system.py`   | combines different types of recommendation techniques  |      
+
+
 ## Table of Contents
 * [Data Exploration](#data-exploration)
 * [Frequent Itemset Mining](#frequent-itemset-mining)
