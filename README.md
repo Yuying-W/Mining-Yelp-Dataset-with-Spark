@@ -4,8 +4,8 @@ Note: This is a private repository, so `View on GitHub` gives a 404 error.
 Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 
 ## Contributors
-|  <img alt="yuying_avatar" src="imgs/yuying_avatar.jpg" width="100"/>                           |  <img alt="yang_avatar" src="imgs/yang_avatar.png" width="100"/>                |    
-|---------------------------------|:---------------------------:|  
+|  <img alt="yuying_avatar" src="imgs/yuying_avatar.jpg" width="100"/> | <img alt="yang_avatar" src="imgs/yang_avatar.png" width="100"/> |    
+|---------------------------------|---------------------------|  
 | Yuying Wang        |    Yang Zheng|   
 
 
@@ -28,14 +28,15 @@ Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 | `similar_businesses.py`   |  detecting similar business pairs using MinHash and LSH algorithm  |    
 | `hybrid_recommender_system.py`   | combines different types of recommendation techniques  |      
  
-
+---
 ## Data Exploration <a name="data-exploration"/>
 
 ### Data Description
 We performed an Exploratory Data Analysis on the dataset, and here are some Interesting Findings:
 - TBA
-- 
+- TBA
 
+---
 
 ## Frequent Itemset Mining <a name="frequent-itemset-mining"/>
 **The high level design:**
@@ -45,21 +46,22 @@ We performed an Exploratory Data Analysis on the dataset, and here are some Inte
  **Conclusion:**  
  Not surprisingly, we found that the restaurants are **geographically close** to each other or they **serve similar food** (maybe have similar business names) in almost all frequent sets. (*e.g. Ramen Sora, Sushi House Goyemon, Monta Ramen*)
 
-
+---
 
 ## Similar Businesses <a name="similar-businesses"/>
 First we use **MinHash** to generate signature of each business, then apply **LSH** to find all candidate pairs, and finally do a full pass to eliminate all false positives. We spent quite some time on designing **hash functions**, and suprisingly, we achieve **precision=1.0** and **recall=1.0** .
 
+---
 
 ## Hybrid Recommender System <a name="hybrid-recommender-system"/>
 
 We combine different types of recommendation techniques including content-based filtering, model-based collaborative filtering, user-based CF, and item-based CF.
 
-The ratings range from 1 to 5, the error distribution on testing data: 
+The ratings range from 1 to 5, and the error distribution on testing data looks like: 
 
 <img alt="Error distribution on testing data" src="imgs/rec-error-dist.png" width="420"/>
 
-about 98% prediction error are less than 1.0, and the overall RMSE is 0.9782, which is much better than any individual recommender system.
+About **98%** prediction error are less than 1.0, and the overall **RMSE** is 0.9782, which is much better than any individual recommender system.
  
 
 ## Dependencies <a name="dependencies"/>
