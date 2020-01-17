@@ -42,6 +42,7 @@ We performed an Exploratory Data Analysis on the dataset, and here are some Inte
 <img alt="son-algorithm" src="imgs/SON.png" width="550"/>
 
  ### Conclusion
+ 
  Not surprisingly, we found that the restaurants are **geographically close** to each other or they **serve similar food** (maybe have similar business names) in almost all frequent sets. (*e.g. Ramen Sora, Sushi House Goyemon, Monta Ramen*)
 
 
