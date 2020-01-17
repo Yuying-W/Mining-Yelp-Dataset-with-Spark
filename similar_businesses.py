@@ -1,4 +1,3 @@
-# Yang Zheng  8812635860
 from pyspark import SparkContext, SparkConf
 from itertools import combinations
 import time
