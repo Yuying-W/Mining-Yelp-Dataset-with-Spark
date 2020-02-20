@@ -7,7 +7,7 @@ Big Data Mining using Apache Spark, data source: https://www.yelp.com/dataset
 
 | <img alt="yuying_avatar" src="imgs/yuying_avatar.jpg" width="100"/>                          |  <img alt="yang_avatar" src="imgs/yang_avatar.png" width="100"/> 
 |---------------------------------|:---------------------------:|   
-| Yuying Wang          |    Yang Zheng    | 
+| Yuying           |    Yang     | 
 
 
 ## This Repository <a name="description-of-files"><a/> 
